@@ -37,7 +37,7 @@ elif selectedMode == 3:
         soFar += Fraction(1, pow(radix, i))
     length = 2
     while True:
-        if (soFar + Fraction(1, pow(radix, length)) < 1):
+        if (soFar + Fraction(1, pow(radix, length)) <= 1):
             break
         length += 1
     print(length)
