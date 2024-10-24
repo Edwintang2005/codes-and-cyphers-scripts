@@ -1,7 +1,12 @@
 # Algorithm to help decode an arithmetic encoding with 3 values
-firstChar = input("First Character is: ")
-secondChar = input("Second Character is: ")
-thirdChar = input("Third Character is: ")
+usingDefaultValues = input("Are you using default values (y/n)? ").lower()
+firstChar = "s1"
+secondChar = "s2"
+thirdChar = "*"
+if usingDefaultValues == "n":
+    firstChar = input("First Character is: ")
+    secondChar = input("Second Character is: ")
+    thirdChar = input("Third Character is: ")
 
 secondStart = float(input("Start of second character: "))
 thirdStart = float(input("Start of third character: "))
@@ -22,7 +27,6 @@ while True:
         diff = intEnd - intStart
         intEnd = intStart + diff * thirdStart
         intStart = intStart + diff * secondStart
-        
     else:
         finalString += thirdChar
         print("3rd Value")
