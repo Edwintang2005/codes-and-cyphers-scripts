@@ -2,11 +2,11 @@ from fractions import Fraction
 import math
 
 
-selectedMode = int(input("""
+selectedMode = int(input(""" These are the modes available:
 1. Trying to find r
 2. Trying to find length from Kraft-McMillan coefficient
 3. Trying to find missing length l
-Input which mode to run: """))
+Which mode would you like to use? """))
 
 if selectedMode == 1:
     lengths = input("Give series of codeword lengths: ")

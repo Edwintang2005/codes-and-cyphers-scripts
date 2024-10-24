@@ -15,16 +15,15 @@ intStart = 0
 intEnd = 1
 finalString = ""
 while True:
+    diff = intEnd - intStart
     currPercent = (value - intStart)/(intEnd - intStart)
     if (currPercent < secondStart):
         finalString += firstChar
         print("1st Value")
-        diff = intEnd - intStart
         intEnd = intStart + diff * secondStart
     elif (currPercent < thirdStart):
         finalString += secondChar
         print("2nd Value")
-        diff = intEnd - intStart
         intEnd = intStart + diff * thirdStart
         intStart = intStart + diff * secondStart
     else:
