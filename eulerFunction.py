@@ -22,4 +22,4 @@ if __name__ == "__main__":
         number = int(input("For a^b, input a: "))
         power = int(input("For a^b, input b: "))
         # Euler's theorem tells us that given euler function = a, we know for x^y, x^a = 1 mod ____
-        print(f"{number}^{power} mod {mod} = {math.pow(number, power % eulerFunction) % mod} mod {mod}!")
+        print(f"{number}^{power} mod {mod} = {pow(number, power % eulerFunction, mod)} mod {mod}!")

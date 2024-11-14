@@ -33,13 +33,24 @@ def shannonFanoCode():
         length = int(input(f"Input the integer between {math.log(1/probability, radix)} and {math.log(radix/probability, radix)}: "))
         averageLength += probability * length
     print(averageLength)
+def extensionNtoInfShannon():
+    numCodes = int(input("How many codewords are there: "))
+    radix = int(input("What radix is the code in: "))
+    averageLength = 0
+    for i in range(0, numCodes):
+        probability = Fraction(input(f"Input the probability for the {i + 1}th codeword: "))
+        averageLength -= probability * math.log(probability, radix)
+    print(averageLength)
 
 if __name__ == "__main__":
     selectedMode = int(input(""" These are the modes available:
     1. Find length of Markov Source
     2. Find length of Shannon-Fano code
+    3. Find average codeword length as n-> ∞ for the nth extension shannon-Fano code
     Which mode would you like to use? """))
     if selectedMode == 1:
         markovSources()
     elif selectedMode == 2:
         shannonFanoCode()
+    elif selectedMode == 3:
+        extensionNtoInfShannon()

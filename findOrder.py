@@ -6,7 +6,7 @@ def findOrder(a, units, mod):
         return
     i = 1
     while 1:
-        if (math.pow(a, i) % mod == 1):
+        if (pow(a, i, mod) == 1):
             break
         else:
             i += 1
