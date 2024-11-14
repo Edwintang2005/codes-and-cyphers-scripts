@@ -1,19 +1,24 @@
 from eulerFunction import getUnits
 import math
 
-mod = int(input("What mod are we working in? "))
+def findOrder(a, units, mod):
+    if (a not in units):
+        return
+    i = 1
+    while 1:
+        if (math.pow(a, i) % mod == 1):
+            break
+        else:
+            i += 1
+    return i
 
-units = getUnits(mod)
-a = int(input("What element are we finding the order for? "))
+if __name__ == "__main__":
+    mod = int(input("What mod are we working in? "))
 
-if (a not in units):
-    print(f"{a} is not a unit for mod {mod}!")
-    exit()
-
-i = 1
-while 1:
-    if (math.pow(a, i) % mod == 1):
-        break
+    units = getUnits(mod)
+    a = int(input("What element are we finding the order for? "))
+    i = findOrder(a, units, mod)
+    if i != None:
+        print(f"ord_({mod})({a}) = {i}")
     else:
-        i += 1
-print(f"ord_({mod})({a}) = {i}")
+        print(f"{a} is not a unit for mod {mod}!")
