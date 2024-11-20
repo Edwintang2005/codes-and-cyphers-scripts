@@ -33,6 +33,7 @@ def shannonFanoCode():
         length = int(input(f"Input the integer between {math.log(1/probability, radix)} and {math.log(radix/probability, radix)}: "))
         averageLength += probability * length
     print(averageLength)
+
 def extensionNtoInfShannon():
     numCodes = int(input("How many codewords are there: "))
     radix = int(input("What radix is the code in: "))
