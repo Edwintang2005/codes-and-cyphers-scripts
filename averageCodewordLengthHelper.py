@@ -30,7 +30,8 @@ def shannonFanoCode():
     averageLength = Fraction()
     for i in range(0, numCodes):
         probability = Fraction(input(f"Input the probability for the {i + 1}th codeword: "))
-        length = int(input(f"Input the integer between {math.log(1/probability, radix)} and {math.log(radix/probability, radix)}: "))
+        length = math.ceil(math.log(1/probability, radix))
+        print(f"Length for this codeword is: {length}")
         averageLength += probability * length
     print(averageLength)
 
