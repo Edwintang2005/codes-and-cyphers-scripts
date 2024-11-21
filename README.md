@@ -20,6 +20,13 @@ For a Shanon-Fano code of the nth extension as n-> ∞, we have to do a slightly
 
 This is available in averageCodewordLengthHelper.py.
 
+**Comma Code Encoder**
+
+
+Using the standard comma code where the first symbol is 0, second 10, third 110 etc, this tool takes in the length of the codewords, then a message to be encoded and outputs the encoding
+
+This is run in commaCode.py
+
 **Arithmetic Encoding and Decoder for 3 values**
 
 
