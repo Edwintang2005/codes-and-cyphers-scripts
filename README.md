@@ -12,7 +12,7 @@ This is in validISBN.py.
 
 This file is a collection of algorithms that will calculate the average codeword lengths of given codes.
 
-For Markov Sources, we can find the average codeword length given a transition matrix and equilibirum vector of the code, hence the tool will guide you through a process of doing the matrix multiplication.
+For Markov Sources, we can find the average codeword length given a transition matrix and equilibirum vector of the code, hence the tool will guide you through a process of doing the matrix multiplication. This requires the user to calculate the lengths for each column by using knuth's lemma, which shouldn't be too difficult. Basically construct a simple huffman tree and encode as usual, except sum up the probabilities at the child nodes. (e.g. For a code with probabilities 1/10, 1/5, 7/10 - Sorted this goes in order 1/10, 1/5, 7/10 hence first child node has probability 1/10 + 1/5 = 3/10. next child node has probability 3/10 + 7/10 = 1. hence average length is 3/10 + 1 = 13/10).
 
 For a Shanon-Fano code, using the probability of the element we can calculate the length of the codeword, hence the tool will calculate these lengths, outputting as we go and ultimately provide you with the average codeword length.
 

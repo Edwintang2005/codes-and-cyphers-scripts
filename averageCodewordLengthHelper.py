@@ -5,7 +5,7 @@ import math
 def markovSources():
     sourceLengths = []
     equilibriumVector = []
-    # Collecting lengths for each source
+    # Collecting lengths for each source - We can find this by using Knuth's Lemma!!!
     index = 0
     while True:
         inputStr = input(f"l{index + 1}: ")
