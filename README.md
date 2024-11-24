@@ -58,3 +58,20 @@ Psuedoprimes are primes that have a gcd of 0 with the base of the modulo field t
 NOTE: This tool does not check for strong pseduoprimes, although strong pseudoprimes must be pseudoprime.
 
 This is in pseudoPrime.py
+
+**Markov Entropy Calculator**
+
+
+This script assumes that the user has the transition matrix and equilibirum vector of a markov source. It then proceeds to calculate the entropy for each column of the transition matrix, ultimately outputting the markov entropy of the code. In addition, it will prompt users to define how many decimal places to round answers to
+
+This is in markovEntropyCalculator.py
+
+**Uniquely Decodable Codes Lengths**
+
+
+This script is able to perform three tasks. 
+1. Given a series of codeword lengths, try to determine the radix that the code must be in by utilising the restriction that the kraft McMillan coefficient must be less than 1
+2. When given the kraft mcmillan coefficient for a code and a series of lengths, determine exactly what the length of the missing codeword is
+3. When given a series of lengths, find the maximum length for the missing codeword
+
+This is available in UD_length.py
